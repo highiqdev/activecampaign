@@ -66,15 +66,15 @@ def agent_info_dict(incoming_dict):
 
 
 def intake_data(agent_dict):
-    # if agent_dict['List Path']:
-    #   CSV_ADDRESS = agent_dict['List Path']
-    # #problem here is probaby parsing the path with an R string. check the colab verison functioning well.
-    # # csv_url = f'{CSV_ADDRESS}'
-    #   df = pd.read_csv(CSV_ADDRESS)
-    #   print('df loaded')
-    #   return df
-    # else:
-    df = pd.read_csv(RAW_DATA)
+    if agent_dict['List Path']:
+        CSV_ADDRESS = agent_dict['List Path']
+    # problem here is probaby parsing the path with an R string. check the colab verison functioning well.
+    # csv_url = f'{CSV_ADDRESS}'
+        df = pd.read_csv(CSV_ADDRESS)
+        print('df loaded')
+        return df
+    # # else:
+    #     df = pd.read_csv(RAW_DATA) #from direct colab upload
     return df
 
 
