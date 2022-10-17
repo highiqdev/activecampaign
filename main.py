@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 import json
+import clean_data as cld
 
 app = Flask("app",
             template_folder="templates",  # name of folder containing html templates
